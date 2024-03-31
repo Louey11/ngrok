@@ -1,24 +1,29 @@
-# Ngrok 
+# Ngrok: Globally Distributed Reverse Proxy
 
-a globally distributed reverse proxy that secures, protects and accelerates your applications and network services, no matter where you run them.
+Demo a website running on your local machine to a client or stakeholder without deploying to a staging site.
 
-## Sign up to ngrok and grab your static domain
+## Getting Started
 
-[Sign up](https://dashboard.ngrok.com/signup) to ngrok and grab your auth token , store it for later use.
+To begin using Ngrok, follow these simple steps:
 
-Grab your [static domain](https://dashboard.ngrok.com/cloud-edge/domains)
+1. **Sign Up**:
 
+   [Sign up](https://dashboard.ngrok.com/signup) for Ngrok to obtain your authentication token. Ensure you store it securely for future use.
 
+2. **Grab Your Static Domain**:
+   
+    Claim your unique [static domain](https://dashboard.ngrok.com/cloud-edge/domains) from Ngrok.
 
 ## Installation
 
-Install ngrok via Apt with the following command:
+Install Ngrok via Apt using the following command:
+
 ```bash
 curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc \
   | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" \
   | sudo tee /etc/apt/sources.list.d/ngrok.list && sudo apt update && sudo apt install ngrok
 ```
-add your authtoken 
+Once installed, add your authentication token: 
 
 ```bash
 ngrok config add-authtoken <your-authtoken>
@@ -26,13 +31,13 @@ ngrok config add-authtoken <your-authtoken>
 
 ## Usage
 
-Put your app online , if it is listening on port 8080, run:
+To put your application online, assuming it's listening on port 8080, execute the following command:
 ```
 ngrok http --domain=<your-static-domain> 8080
 ```
-then grab your url it should be something like this 
+You'll receive a URL similar to this: 
 ```
 Forwarding   https://<your-static-domain> http://localhost:8080
 ```
-enjoy !
+Enjoy the benefits of Ngrok
 
