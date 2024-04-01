@@ -14,13 +14,6 @@ To begin using Ngrok, follow these simple steps:
    
     Claim your unique [static domain](https://dashboard.ngrok.com/cloud-edge/domains) from Ngrok.
 
-## Easy way if you have docker
-Put your app online , assuming it's listening on port 8080
-```bash
-docker run -it -e NGROK_AUTHTOKEN=<your-authtoken> ngrok/ngrok:latest http --domain=<your-static-domain> 8080
-```
-
-
 ## Installation
 
 Install Ngrok via Apt using the following command:
@@ -46,5 +39,12 @@ You'll receive a URL similar to this:
 ```
 Forwarding   https://<your-static-domain> http://localhost:8080
 ```
+
+## Easy way if you have docker
+Put your app online , assuming it's listening on port 8080 ( you may run into problems )
+```bash
+docker run -it -e NGROK_AUTHTOKEN=<your-authtoken> ngrok/ngrok:latest http --domain=<your-static-domain> 8080
+```
+
 Enjoy the benefits of Ngrok
 
